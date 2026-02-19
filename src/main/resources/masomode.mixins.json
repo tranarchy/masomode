@@ -38,7 +38,8 @@
         "LiquidBlockMixin",
         "SnowyDirtBlockMixin",
         "CampfireBlockMixin",
-        "MonsterMixin"
+        "MonsterMixin",
+        "WorldGenRegionMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
