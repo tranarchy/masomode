@@ -37,7 +37,7 @@ public class BlocksMixin {
         }
 
         switch (stringIdentifier) {
-            case "dirt":
+            case "dirt", "coarse_dirt":
                 block = Blocks.register(
                         ResourceKey.create(Registries.BLOCK, Identifier.withDefaultNamespace(stringIdentifier)),
                         (properties) -> new SandBlock(new ColorRGBA(14406560), properties), BlockBehaviour.Properties.of().mapColor(MapColor.DIRT).strength(0.5F * 10f, 0.5f).sound(SoundType.GRAVEL)
