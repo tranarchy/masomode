@@ -39,7 +39,8 @@
         "SnowyDirtBlockMixin",
         "CampfireBlockMixin",
         "MonsterMixin",
-        "WorldGenRegionMixin"
+        "WorldGenRegionMixin",
+        "ShovelItemMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
