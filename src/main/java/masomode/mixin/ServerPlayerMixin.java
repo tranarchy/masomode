@@ -200,7 +200,7 @@ public class ServerPlayerMixin implements IServerPlayer {
             onFireTick = 0;
         }
 
-        serverPlayer.getFoodData().addExhaustion(0.005f);
+        serverPlayer.getFoodData().addExhaustion(0.002f);
     }
 
     @Inject(method = "hurtServer", at = @At("TAIL"))

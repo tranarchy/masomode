@@ -16,7 +16,7 @@ public class PlayerMixin {
         Player player = ((Player) (Object)this);
 
         if (!player.level().isClientSide()) {
-            player.getFoodData().addExhaustion(amount * 5f);
+            player.getFoodData().addExhaustion(amount * 3.5f);
         }
 
         callbackInfo.cancel();
