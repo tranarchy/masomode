@@ -30,7 +30,7 @@ public class BlocksMixin {
             originalProperties = originalProperties.noCollision();
             return block;
         } else if (
-                stringIdentifier.endsWith("_log") || stringIdentifier.endsWith("_wood") || stringIdentifier.endsWith("_planks") || stringIdentifier.equals("warped_stem") || stringIdentifier.equals("crimson_stem")
+                stringIdentifier.endsWith("_log") || stringIdentifier.endsWith("_wood") || stringIdentifier.endsWith("_planks") || stringIdentifier.endsWith("_stairs") || stringIdentifier.endsWith("_slab") || stringIdentifier.equals("warped_stem") || stringIdentifier.equals("crimson_stem")
                 || stringIdentifier.endsWith("lantern") || stringIdentifier.equals("crafting_table")) {
             originalProperties = originalProperties.requiresCorrectToolForDrops();
             return block;
