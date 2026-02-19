@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/ten_percent",
+  "criteria": {
+    "stone_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "stone_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft a stone pickaxe",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:stone_pickaxe"
+    },
+    "title": "Rock and Stone"
+  },
+  "requirements": [
+    [
+      "stone_pickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

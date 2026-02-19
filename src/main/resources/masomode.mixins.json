@@ -1,0 +1,49 @@
+{
+	"required": true,
+	"package": "masomode.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+        "SpiderMixin",
+        "CreeperMixin",
+        "ServerPlayerMixin",
+        "PlayerMixin",
+        "MobMixin",
+        "AbstractSkeletonMixin",
+        "LivingEntityMixin",
+        "AbstractCowMixin",
+        "PigMixin",
+        "SheepMixin",
+        "WitherSkeletonMixin",
+        "ConsumableMixin",
+        "ItemMixin",
+        "RecipeManagerMixin",
+        "ItemStackMixin",
+        "FoodDataMixin",
+        "SensingMixin",
+        "ZombieMixin",
+        "EntityMixin",
+        "AbstractBoatMixin",
+        "ServerLevelMixin",
+        "SwellGoalMixin",
+        "ProjectileMixin",
+        "BlocksMixin",
+        "GrassBlockMixin",
+        "PropertiesMixin",
+        "TorchBlockMixin",
+        "WallTorchBlockMixin",
+        "CraftingMenuMixin",
+        "ItemsMixin",
+        "GhastMixin",
+        "GhastShootFireballGoalMixin",
+        "LiquidBlockMixin",
+        "SnowyDirtBlockMixin",
+        "CampfireBlockMixin",
+        "MonsterMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

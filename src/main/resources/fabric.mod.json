@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "masomode",
+	"version": "${version}",
+	"name": "Maso Mode",
+	"description": "For those who seek a greater challenge, starvation is constant, mobs are tougher, revamped progression",
+	"authors": [
+		"tranarchy"
+	],
+	"contact": {
+		"homepage": "https://anarchy.lol/",
+		"sources": "https://github.com/tranarchy/masomode"
+	},
+	"license": "GPL-3.0",
+	"icon": "assets/masomode/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"masomode.Main"
+		],
+		"client": [
+			"masomode.MainClient"
+		]
+	},
+	"mixins": [
+		"masomode.mixins.json",
+		{
+			"config": "masomode.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.2",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

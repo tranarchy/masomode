@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 600,
+  "experience": 0.4,
+  "ingredient": ["masomode:iron_dust"],
+  "result": {
+    "id": "minecraft:iron_nugget"
+  }
+}

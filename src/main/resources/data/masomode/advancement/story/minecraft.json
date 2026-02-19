@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/hammer_time",
+  "criteria": {
+    "diamond_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:diamond_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft a diamond pickaxe",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:diamond_pickaxe"
+    },
+    "title": "Minecraft"
+  },
+  "requirements": [
+    [
+      "diamond_pickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

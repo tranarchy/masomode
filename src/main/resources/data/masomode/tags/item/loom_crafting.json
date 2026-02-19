@@ -1,0 +1,11 @@
+{
+  "values": [
+    "#minecraft:beds",
+    "#minecraft:wool",
+    "#minecraft:banners",
+    "#minecraft:wool_carpets",
+    "#minecraft:harnesses",
+    "minecraft:painting",
+    "minecraft:string"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:story/upgrade_tools",
+  "criteria": {
+    "brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Smelt a brick on campfire",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:bricks"
+    },
+    "title": "Bricked Up"
+  },
+  "requirements": [
+    [
+      "brick"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

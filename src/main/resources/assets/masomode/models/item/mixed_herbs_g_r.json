@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "masomode:item/mixed_herbs_g_r"
+  }
+}

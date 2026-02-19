@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "misc",
+  "cookingtime": 1500,
+  "experience": 0.3,
+  "ingredient": ["masomode:copper_dust"],
+  "result": {
+    "id": "minecraft:copper_nugget"
+  }
+}

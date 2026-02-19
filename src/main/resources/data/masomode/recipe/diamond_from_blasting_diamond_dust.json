@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 500,
+  "experience": 1.0,
+  "group": "diamond",
+  "ingredient": "masomode:diamond_dust",
+  "result": {
+    "id": "minecraft:diamond"
+  }
+}

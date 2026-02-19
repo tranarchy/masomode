@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:story/upgrade_tools",
+  "criteria": {
+    "copper_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Smelt a copper nugget on campfire",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:copper_nugget"
+    },
+    "title": "Poor quality copper"
+  },
+  "requirements": [
+    [
+      "copper_nugget"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

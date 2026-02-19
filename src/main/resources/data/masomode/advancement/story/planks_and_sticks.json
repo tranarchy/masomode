@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/finally",
+  "criteria": {
+    "stonecutter": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:stonecutter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft a table saw",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:stonecutter"
+    },
+    "title": "Planks and sticks"
+  },
+  "requirements": [
+    [
+      "stonecutter"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

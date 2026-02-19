@@ -1,0 +1,49 @@
+package masomode.mixin;
+
+import masomode.mobeffect.CustomMobEffects;
+import masomode.goal.CommonGoal;
+import masomode.utils.Common;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.zombie.Zombie;
+import net.minecraft.world.level.Level;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+@Mixin(Zombie.class)
+public class ZombieMixin extends Monster {
+    public ZombieMixin(EntityType<? extends Zombie> entityType, Level level) {
+        super(entityType, level);
+    }
+
+    @Inject(method = "doHurtTarget", at = @At("HEAD"))
+    public void doHurtTarget(ServerLevel serverLevel, Entity entity, CallbackInfoReturnable<Boolean> callbackInfoReturnable) {
+        if (super.doHurtTarget(serverLevel, entity) && entity instanceof ServerPlayer serverPlayer && !serverPlayer.hasEffect(CustomMobEffects.INFECTION)) {
+            serverPlayer.addEffect(new MobEffectInstance(CustomMobEffects.INFECTION, 20 * 60 * 10, 0), this);
+        }
+    }
+
+    @Inject(method = "randomizeReinforcementsChance", at = @At("HEAD"), cancellable = true)
+    protected void randomizeReinforcementsChance(CallbackInfo callbackInfo) {
+        if (Common.isBloodMoon(this.level())) {
+            this.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(0.3f);
+            callbackInfo.cancel();
+        }
+
+    }
+
+    @Inject(method = "registerGoals", at = @At("RETURN"))
+    private void registerGoals(CallbackInfo callbackInfo) {
+        CommonGoal.targetAnimals(this, this.targetSelector);
+        //this.targetSelector.addGoal(0, new BreakBlockGoal(this, (difficulty) -> difficulty == Difficulty.HARD));
+    }
+}

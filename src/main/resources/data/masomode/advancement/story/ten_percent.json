@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:story/root",
+  "criteria": {
+    "flint": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:flint"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Find flint",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:gravel"
+    },
+    "title": "10%"
+  },
+  "requirements": [
+    [
+      "flint"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

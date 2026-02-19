@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#minecraft:logs",
+    "minecraft:copper_axe",
+    "minecraft:copper_pickaxe",
+    "minecraft:shears"
+  ],
+  "result": {
+    "id": "minecraft:crafting_table",
+    "count": 1
+  }
+}
+

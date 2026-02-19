@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/strike_while",
+  "criteria": {
+    "anvil": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:anvil"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft an anvil to unlock recipes with diamond",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:anvil"
+    },
+    "title": "Hammer Time"
+  },
+  "requirements": [
+    [
+      "anvil"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

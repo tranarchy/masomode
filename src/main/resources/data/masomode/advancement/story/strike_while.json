@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/planks_and_sticks",
+  "criteria": {
+    "smithing_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:smithing_table"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft a smithing table to unlock more recipes with iron",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:smithing_table"
+    },
+    "title": "Strike while the iron is hot"
+  },
+  "requirements": [
+    [
+      "smithing_table"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

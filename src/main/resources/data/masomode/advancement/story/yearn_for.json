@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:story/mine_stone",
+  "criteria": {
+    "coal_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:coals"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Mine coal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:coal_ore"
+    },
+    "title": "The children yearn for the mines"
+  },
+  "requirements": [
+    [
+      "coal_ore"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

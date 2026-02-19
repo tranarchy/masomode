@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/strike_while",
+  "criteria": {
+    "cauldron": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:cauldron"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft a cauldron to unlock stew, soup and herb recipes",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:cauldron"
+    },
+    "title": "Potions?"
+  },
+  "requirements": [
+    [
+      "cauldron"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

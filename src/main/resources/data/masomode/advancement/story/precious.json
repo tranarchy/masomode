@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:story/enter_the_nether",
+  "criteria": {
+    "enchanting_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:enchanting_table"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Find an enchanting table in a bastion remnant",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:enchanting_table"
+    },
+    "title": "Precious!"
+  },
+  "requirements": [
+    [
+      "enchanting_table"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

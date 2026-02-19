@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"package": "masomode.mixin.client",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+      "KeyboardInputMixin",
+      "MultiPlayerGameModeMixin",
+      "DimensionTypeMixin",
+      "DebugScreenEntriesMixin",
+      "LevelRendererMixin",
+      "EnvironmentAttributeSystemMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

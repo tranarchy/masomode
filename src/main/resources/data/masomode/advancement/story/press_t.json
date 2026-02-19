@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/yearn_for",
+  "criteria": {
+    "fire_starter": {
+      "conditions": {
+        "items": [
+          {
+            "items": "masomode:fire_starter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft a fire starter so you can light torches",
+    "icon": {
+      "count": 1,
+      "id": "masomode:fire_starter"
+    },
+    "title": "Press T for torch"
+  },
+  "requirements": [
+    [
+      "fire_starter"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

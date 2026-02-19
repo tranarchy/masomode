@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/poor_quality_copper",
+  "criteria": {
+    "copper_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft a copper pickaxe",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:copper_pickaxe"
+    },
+    "title": "Not so useless anymore"
+  },
+  "requirements": [
+    [
+      "copper_pickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

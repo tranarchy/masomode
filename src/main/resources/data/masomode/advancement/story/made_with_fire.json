@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/finally",
+  "criteria": {
+    "chainmail": {
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:chainmail_chestplate", "minecraft:chainmail_leggings", "minecraft:chainmail_boots", "minecraft:chainmail_helmet"]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft a piece of chainmail armor",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:chainmail_chestplate"
+    },
+    "title": "Made with fire?"
+  },
+  "chainmail": [
+    [
+      "grindstone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

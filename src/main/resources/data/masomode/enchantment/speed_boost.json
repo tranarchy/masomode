@@ -1,0 +1,35 @@
+{
+  "anvil_cost": 8,
+  "description": {
+    "translate": "enchantment.masomode.speed_boost"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.05,
+          "per_level_above_first": 0.15
+        },
+        "attribute": "minecraft:movement_speed",
+        "id": "masomode:enchantment.speed_boost",
+        "operation": "add_value"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 50,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 25,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "offhand"
+  ],
+  "primary_items": "minecraft:totem_of_undying",
+  "supported_items": "minecraft:totem_of_undying",
+  "weight": 5
+}

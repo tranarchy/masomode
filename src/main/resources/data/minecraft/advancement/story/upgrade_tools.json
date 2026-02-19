@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/yearn_for",
+  "criteria": {
+    "campfire": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:campfire"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft a campfire",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:campfire"
+    },
+    "title": "And of course... Light and Dark"
+  },
+  "requirements": [
+    [
+      "campfire"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

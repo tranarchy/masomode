@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:bricks",
+    "I": "minecraft:cobblestone"
+  },
+  "pattern": [
+    "II",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:furnace"
+  }
+}

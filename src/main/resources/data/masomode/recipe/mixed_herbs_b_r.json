@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "masomode:blue_herb",
+    "masomode:red_herb",
+    "minecraft:paper"
+  ],
+  "result": {
+    "id": "masomode:mixed_herbs_b_r",
+    "count": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/planks_and_sticks",
+  "criteria": {
+    "grindstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:grindstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft a grindstone to unlock iron tool recipes",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:grindstone"
+    },
+    "title": "Keep grinding"
+  },
+  "requirements": [
+    [
+      "grindstone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

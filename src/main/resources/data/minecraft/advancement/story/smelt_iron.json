@@ -1,0 +1,31 @@
+{
+  "parent": "masomode:story/ol_reliable",
+  "criteria": {
+    "iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:iron_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Smelt an iron nugget",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:iron_nugget"
+    },
+    "title": {
+      "translate": "advancements.story.smelt_iron.title"
+    }
+  },
+  "requirements": [
+    [
+      "iron"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

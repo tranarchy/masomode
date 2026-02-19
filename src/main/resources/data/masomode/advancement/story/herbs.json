@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:story/root",
+  "criteria": {
+    "herb": {
+      "conditions": {
+        "items": [
+          {
+            "items": ["masomode:blue_herb", "masomode:red_herb", "masomode:green_herb"]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Find herbs to treat your wounds and cure infections",
+    "icon": {
+      "count": 1,
+      "id": "masomode:blue_herb"
+    },
+    "title": "Herbs!"
+  },
+  "requirements": [
+    [
+      "herb"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

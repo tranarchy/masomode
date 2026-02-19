@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "minecraft:stick",
+    "minecraft:copper_ingot"
+  ],
+  "result": {
+    "id": "minecraft:copper_shovel",
+    "count": 1
+  }
+}
+

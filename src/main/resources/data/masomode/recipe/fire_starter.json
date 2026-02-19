@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:paper",
+    "#masomode:fire_starter_wood",
+    "#masomode:fire_starter_wood"
+  ],
+  "result": {
+    "id": "masomode:fire_starter",
+    "count": 1
+  }
+}

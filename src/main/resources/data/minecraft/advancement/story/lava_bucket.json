@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/strike_while",
+  "criteria": {
+    "blast_furnace": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:blast_furnace"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft a blast furnace to smelt diamond dust",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:blast_furnace"
+    },
+    "title": "Blast 'em"
+  },
+  "requirements": [
+    [
+      "blast_furnace"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

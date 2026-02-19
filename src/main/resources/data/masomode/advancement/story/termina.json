@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/potions",
+  "criteria": {
+    "stonecutter": {
+      "conditions": {
+        "items": [
+          {
+            "items": ["masomode:mixed_herbs_b_r", "masomode:mixed_herbs_g_r"]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Create a mixed herb",
+    "icon": {
+      "count": 1,
+      "id": "masomode:mixed_herbs_b_r"
+    },
+    "title": "Termina is upon us"
+  },
+  "requirements": [
+    [
+      "stonecutter"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
