@@ -40,7 +40,9 @@
         "CampfireBlockMixin",
         "MonsterMixin",
         "WorldGenRegionMixin",
-        "ShovelItemMixin"
+        "ShovelItemMixin",
+        "PumpkinBlockMixin",
+        "CarvedPumpkinBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
