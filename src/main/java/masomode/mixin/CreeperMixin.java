@@ -40,6 +40,9 @@ public class CreeperMixin extends Monster {
     @Unique
     private boolean ranBloodMoonTick = false;
 
+    @Unique
+    private boolean chargedDueToBloodMoon = false;
+
     public CreeperMixin(EntityType<? extends Creeper> entityType, Level level) {
         super(entityType, level);
     }
@@ -49,9 +52,13 @@ public class CreeperMixin extends Monster {
         if (Common.isBloodMoon(this.level())) {
             if (!this.entityData.get(DATA_IS_POWERED).booleanValue() && this.random.nextFloat() > 0.8f && !ranBloodMoonTick){
                 this.entityData.set(DATA_IS_POWERED, true);
+                chargedDueToBloodMoon = true;
             }
 
             ranBloodMoonTick = true;
+        } else if (chargedDueToBloodMoon) {
+            this.entityData.set(DATA_IS_POWERED, false);
+            chargedDueToBloodMoon = false;
         }
     }
 
