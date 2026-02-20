@@ -43,7 +43,8 @@
         "ShovelItemMixin",
         "PumpkinBlockMixin",
         "CarvedPumpkinBlockMixin",
-        "ToolMaterialMixin"
+        "ToolMaterialMixin",
+        "PhantomSpawnerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
