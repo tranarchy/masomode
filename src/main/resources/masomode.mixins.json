@@ -42,7 +42,8 @@
         "WorldGenRegionMixin",
         "ShovelItemMixin",
         "PumpkinBlockMixin",
-        "CarvedPumpkinBlockMixin"
+        "CarvedPumpkinBlockMixin",
+        "ToolMaterialMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
