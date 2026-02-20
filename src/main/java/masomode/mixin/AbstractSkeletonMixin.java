@@ -51,16 +51,6 @@ public abstract class AbstractSkeletonMixin extends Monster implements RangedAtt
         super(entityType, level);
     }
 
-    /*@Inject(method = "registerGoals", at = @At("RETURN"))
-    private void registerGoals(CallbackInfo callbackInfo) {
-        for (WrappedGoal wrappedGoal : this.goalSelector.getAvailableGoals()) {
-            if (wrappedGoal.getGoal() instanceof FleeSunGoal || wrappedGoal.getGoal() instanceof RestrictSunGoal) {
-                this.goalSelector.removeGoal(wrappedGoal.getGoal());
-            }
-        }
-
-    }*/
-
     @Inject(method = "registerGoals", at = @At("RETURN"))
     private void registerGoals(CallbackInfo callbackInfo) {
         CommonGoal.targetAnimals(this, this.targetSelector);
@@ -74,9 +64,7 @@ public abstract class AbstractSkeletonMixin extends Monster implements RangedAtt
     public void performRangedAttack(LivingEntity livingEntity, float f, CallbackInfo info) {
         if (Common.isBloodMoon(this.level())) {
 
-            Random r = new Random();
-
-            if (r.nextInt(4) == 0) {
+            if (this.random.nextFloat() > 0.95f) {
                 if (this.level() instanceof ServerLevel serverLevel) {
                     ItemStack crossbowItemStack = new ItemStack(Items.CROSSBOW);
                     ItemStack fireworkItemStack = new ItemStack(Items.FIREWORK_ROCKET);
@@ -102,7 +90,7 @@ public abstract class AbstractSkeletonMixin extends Monster implements RangedAtt
                 }
             }
 
-            if (r.nextInt(3) == 0) {
+            if (this.random.nextFloat() > 0.7f) {
                 this.performRangedAttack(livingEntity, f);
             }
 

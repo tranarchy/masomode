@@ -47,7 +47,7 @@ public class CreeperMixin extends Monster {
     @Inject(method = "tick", at = @At("HEAD"))
     public void tickBefore(CallbackInfo callbackInfo) {
         if (Common.isBloodMoon(this.level())) {
-            if (!this.entityData.get(DATA_IS_POWERED).booleanValue() && this.random.nextInt(5) == 0 && !ranBloodMoonTick){
+            if (!this.entityData.get(DATA_IS_POWERED).booleanValue() && this.random.nextFloat() > 0.8f && !ranBloodMoonTick){
                 this.entityData.set(DATA_IS_POWERED, true);
             }
 

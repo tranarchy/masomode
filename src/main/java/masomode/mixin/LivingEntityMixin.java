@@ -44,9 +44,7 @@ public class LivingEntityMixin {
     public void tick(CallbackInfo callbackInfo) {
         LivingEntity livingEntity = ((LivingEntity) (Object)this);
 
-        Random random = new Random();
-
-        if (livingEntity.isOnFire() && !(livingEntity.level().isClientSide()) && random.nextInt(50) == 0) {
+        if (livingEntity.isOnFire() && !(livingEntity.level().isClientSide()) && livingEntity.getRandom().nextFloat() > 0.95f) {
             Common.setNeighborBlocksOnFire((ServerLevel) livingEntity.level(), livingEntity.blockPosition());
         }
     }

@@ -8,6 +8,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -47,7 +48,7 @@ public class ServerPlayerMixin implements IServerPlayer {
 
     @Unique
     public boolean teleport(ServerPlayer serverPlayer) {
-        Random random = new Random();
+        RandomSource random = serverPlayer.getRandom();
 
         if (!serverPlayer.level().isClientSide() && serverPlayer.isAlive()) {
             double d = serverPlayer.getX() + (random.nextDouble() - (double)0.5F) * (double)64.0F;
