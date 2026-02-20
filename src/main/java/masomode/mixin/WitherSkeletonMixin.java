@@ -2,14 +2,19 @@ package masomode.mixin;
 
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.skeleton.AbstractSkeleton;
 import net.minecraft.world.entity.monster.skeleton.WitherSkeleton;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -26,11 +31,24 @@ public abstract class WitherSkeletonMixin extends AbstractSkeleton {
         info.cancel();
     }
 
-    /*@Inject(method = "doHurtTarget", at = @At("RETURN"))
-    public void doHurtTarget(ServerLevel serverLevel, Entity entity, CallbackInfoReturnable<Boolean> callbackInfoReturnable) {
-        if (callbackInfoReturnable.getReturnValue()) {
-            ((LivingEntity) entity).addEffect(new MobEffectInstance(CustomMobEffects.BLEED, -1), this);
-            ((LivingEntity) entity).addEffect(new MobEffectInstance(CustomMobEffects.BONE_FRACTURE, -1), this);
+    @Unique
+    private AABB getHitbox(LivingEntity livingEntity) {
+        AABB aABB = livingEntity.getBoundingBox();
+        Entity entity = livingEntity.getVehicle();
+        if (entity != null) {
+            Vec3 vec3 = entity.getPassengerRidingPosition(livingEntity);
+            return aABB.setMinY(Math.max(vec3.y, aABB.minY));
+        } else {
+            return aABB;
         }
-    }*/
+    }
+
+    @Override
+    public boolean isWithinMeleeAttackRange(LivingEntity livingEntity) {
+        double maxRange = 1.6;
+        double minRange = 0.0;
+
+        AABB aABB = getHitbox(livingEntity);
+        return this.getAttackBoundingBox(maxRange).intersects(aABB) && (minRange <= 0.0 || !this.getAttackBoundingBox(minRange).intersects(aABB));
+    }
 }

@@ -3,6 +3,7 @@ package masomode.mixin;
 import masomode.mobeffect.CustomMobEffects;
 import masomode.goal.CommonGoal;
 import masomode.utils.Common;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.DifficultyInstance;
@@ -12,10 +13,14 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.zombie.Zombie;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.AttackRange;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -59,5 +64,26 @@ public class ZombieMixin extends Monster {
         this.setDropChance(EquipmentSlot.FEET, 1.0F);
         this.setDropChance(EquipmentSlot.MAINHAND, 1.0F);
         this.setDropChance(EquipmentSlot.OFFHAND, 1.0F);
+    }
+
+    @Unique
+    private AABB getHitbox(LivingEntity livingEntity) {
+        AABB aABB = livingEntity.getBoundingBox();
+        Entity entity = livingEntity.getVehicle();
+        if (entity != null) {
+            Vec3 vec3 = entity.getPassengerRidingPosition(livingEntity);
+            return aABB.setMinY(Math.max(vec3.y, aABB.minY));
+        } else {
+            return aABB;
+        }
+    }
+
+    @Override
+    public boolean isWithinMeleeAttackRange(LivingEntity livingEntity) {
+        double maxRange = 1.4;
+        double minRange = 0.0;
+
+        AABB aABB = getHitbox(livingEntity);
+        return this.getAttackBoundingBox(maxRange).intersects(aABB) && (minRange <= 0.0 || !this.getAttackBoundingBox(minRange).intersects(aABB));
     }
 }
