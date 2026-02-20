@@ -26,7 +26,7 @@ public class MobMixin {
 
     @ModifyReturnValue(method = "createMobAttributes", at = @At("RETURN"))
     private static AttributeSupplier.Builder createMobAttributes(AttributeSupplier.Builder builder) {
-        return LivingEntity.createLivingAttributes().add(Attributes.FOLLOW_RANGE, (double)100.0F);
+        return LivingEntity.createLivingAttributes().add(Attributes.FOLLOW_RANGE, (double)50.0F);
     }
 
 }
