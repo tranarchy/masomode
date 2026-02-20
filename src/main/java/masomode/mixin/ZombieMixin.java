@@ -5,14 +5,16 @@ import masomode.goal.CommonGoal;
 import masomode.utils.Common;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.zombie.Zombie;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerLevelAccessor;
+import org.jspecify.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -45,5 +47,17 @@ public class ZombieMixin extends Monster {
     private void registerGoals(CallbackInfo callbackInfo) {
         CommonGoal.targetAnimals(this, this.targetSelector);
         //this.targetSelector.addGoal(0, new BreakBlockGoal(this, (difficulty) -> difficulty == Difficulty.HARD));
+    }
+
+    @Inject(method = "finalizeSpawn", at = @At("RETURN"))
+    public void finalizeSpawnAfter(
+            ServerLevelAccessor serverLevelAccessor, DifficultyInstance difficultyInstance, EntitySpawnReason entitySpawnReason, @Nullable SpawnGroupData spawnGroupData, CallbackInfoReturnable<SpawnGroupData> callbackInfoReturnable
+    ) {
+        this.setDropChance(EquipmentSlot.HEAD, 1.0F);
+        this.setDropChance(EquipmentSlot.CHEST, 1.0F);
+        this.setDropChance(EquipmentSlot.LEGS, 1.0F);
+        this.setDropChance(EquipmentSlot.FEET, 1.0F);
+        this.setDropChance(EquipmentSlot.MAINHAND, 1.0F);
+        this.setDropChance(EquipmentSlot.OFFHAND, 1.0F);
     }
 }
