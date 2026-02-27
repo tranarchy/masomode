@@ -44,7 +44,8 @@
         "PumpkinBlockMixin",
         "CarvedPumpkinBlockMixin",
         "ToolMaterialMixin",
-        "PhantomSpawnerMixin"
+        "PhantomSpawnerMixin",
+        "LavaFluidMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
