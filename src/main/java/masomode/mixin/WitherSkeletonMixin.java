@@ -27,7 +27,13 @@ public abstract class WitherSkeletonMixin extends AbstractSkeleton {
 
     @Inject(method = "populateDefaultEquipmentSlots", at = @At("HEAD"), cancellable = true)
     private void populateDefaultEquipmentSlot(RandomSource randomSource, DifficultyInstance difficultyInstance, CallbackInfo info) {
-        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_AXE));
+
+        if (this.random.nextFloat() <= 0.2f) {
+            this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.BOW));
+        } else {
+            this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_AXE));
+        }
+
         info.cancel();
     }
 
