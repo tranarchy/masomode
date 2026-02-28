@@ -1,6 +1,6 @@
 package masomode.utils;
 
-import masomode.Item.CustomItemTags;
+import masomode.item.CustomItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

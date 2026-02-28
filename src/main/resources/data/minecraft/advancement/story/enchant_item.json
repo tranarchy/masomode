@@ -1,5 +1,5 @@
 {
-  "parent": "masomode:story/precious",
+  "parent": "masomode:story/blue_tears",
   "criteria": {
     "enchanted_item": {
       "trigger": "minecraft:enchanted_item"

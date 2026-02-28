@@ -2,6 +2,7 @@
   "values": [
     "#minecraft:needs_diamond_tool",
     "#minecraft:needs_iron_tool",
-    "#minecraft:iron_ores"
+    "#minecraft:iron_ores",
+    "#minecraft:lapis_ores"
   ]
 }

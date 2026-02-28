@@ -1,4 +1,4 @@
-package masomode.Item;
+package masomode.item;
 
 import masomode.Main;
 import masomode.block.CustomBlocks;
@@ -38,6 +38,8 @@ public class CustomItems {
     public static Item LIT_TORCH;
     public static Item FIRE_STARTER;
 
+    public static Item  CERULEAN_PEARL;
+
 
     public static void register() {
         COPPER_DUST = register("copper_dust", Item::new, new Item.Properties());
@@ -53,5 +55,7 @@ public class CustomItems {
         FIRE_STARTER = register("fire_starter", FireStarterItem::new, new Item.Properties().durability(5));
 
         LIT_TORCH = Items.registerBlock(CustomBlocks.LIT_TORCH, (BiFunction<Block, Item.Properties, Item>)((block, properties) -> new StandingAndWallBlockItem(block, CustomBlocks.LIT_WALL_TORCH, Direction.DOWN, properties)));
+
+        CERULEAN_PEARL = register("cerulean_pearl", CeruleanPearlItem::new, new Item.Properties().stacksTo(16));
     }
 }

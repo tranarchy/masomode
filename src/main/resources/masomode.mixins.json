@@ -46,7 +46,8 @@
         "ToolMaterialMixin",
         "PhantomSpawnerMixin",
         "LavaFluidMixin",
-        "BlockBehaviourMixin"
+        "BlockBehaviourMixin",
+        "EnchantmentMenuMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

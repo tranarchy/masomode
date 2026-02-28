@@ -1,7 +1,7 @@
 package masomode;
 
-import masomode.Item.CustomItemTags;
-import masomode.Item.CustomItems;
+import masomode.item.CustomItemTags;
+import masomode.item.CustomItems;
 import masomode.mobeffect.CustomMobEffects;
 import masomode.block.CustomBlocks;
 import net.fabricmc.api.ModInitializer;

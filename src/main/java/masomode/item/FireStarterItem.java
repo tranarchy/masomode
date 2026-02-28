@@ -1,4 +1,4 @@
-package masomode.Item;
+package masomode.item;
 
 import masomode.block.CustomBlocks;
 import net.minecraft.core.BlockPos;

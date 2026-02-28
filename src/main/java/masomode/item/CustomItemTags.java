@@ -1,4 +1,4 @@
-package masomode.Item;
+package masomode.item;
 
 import masomode.Main;
 import net.minecraft.core.registries.Registries;

@@ -1,4 +1,4 @@
-package masomode.Item;
+package masomode.item;
 
 import masomode.consumeeffect.CureConsumeEffect;
 import masomode.mobeffect.CustomMobEffects;

@@ -1,4 +1,4 @@
-package masomode.Item;
+package masomode.item;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -14,15 +14,15 @@ import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 
 import java.util.function.Consumer;
 
-public class BlueHerbItem extends Item {
-    public static Item.Properties properties = new Item.Properties().food(new FoodProperties.Builder().alwaysEdible().build(), Consumables.defaultFood().onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.REGENERATION, 120, 1))).build());
+public class MixedHerbsBRItem extends Item {
+    public static Item.Properties properties = new Item.Properties().food(new FoodProperties.Builder().alwaysEdible().build(), Consumables.defaultFood().onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.REGENERATION, 120, 2))).build());
 
-    public BlueHerbItem(Item.Properties properties) {
+    public MixedHerbsBRItem(Item.Properties properties) {
         super(properties);
     }
 
     @Override
     public void appendHoverText(ItemStack itemStack, TooltipContext tooltipContext, TooltipDisplay tooltipDisplay, Consumer<Component> consumer, TooltipFlag tooltipFlag) {
-        consumer.accept(Component.literal("A blue herb with a slightly citrusy scent").withStyle(ChatFormatting.GOLD));
+        consumer.accept(Component.literal("Mixed herbs for treating wounds").withStyle(ChatFormatting.GOLD));
     }
 }

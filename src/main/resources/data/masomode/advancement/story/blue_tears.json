@@ -1,0 +1,29 @@
+{
+  "parent": "masomode:story/precious",
+  "criteria": {
+    "cerulean_pearl": {
+      "conditions": {
+        "items": [
+          {
+            "items": "masomode:cerulean_pearl"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft a Cerulean Pearl",
+    "icon": {
+      "count": 1,
+      "id": "masomode:cerulean_pearl"
+    },
+    "title": "Blue Tears"
+  },
+  "requirements": [
+    [
+      "cerulean_pearl"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
